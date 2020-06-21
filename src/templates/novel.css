@@ -5,12 +5,15 @@
 .title {
   text-align: center;
   margin-left: -1em;
+  margin-bottom: 2em;
 }
 
 .novel-link {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   margin-left: -3em;
+  margin: 3em -3em 5em 0;
 }
 
 .novel-link-item {
