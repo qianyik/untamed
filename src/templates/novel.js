@@ -12,6 +12,13 @@ const Novel = ({ pageContext }) => (
     </Helmet>
 
     <h1 className="title">{pageContext.title}</h1>
+
+    {/* <div className="novel-link-top">
+      <Link to="/catalog" className="novel-link-item">
+        Catalog
+      </Link>
+    </div> */}
+
     <div
       className="content"
       dangerouslySetInnerHTML={{ __html: pageContext.content }}
@@ -26,7 +33,7 @@ const Novel = ({ pageContext }) => (
       <Link to="/catalog" className="novel-link-item">
         Catalog
       </Link>
-      {pageContext.id < 119 && (
+      {pageContext.id < 127 && (
         <Link to={`/untamed/${pageContext.id + 1}`} className="novel-link-item">
           Next
         </Link>
