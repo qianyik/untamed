@@ -1,0 +1,23 @@
+.catalog-page {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-title,
+.catalog-list {
+  align-self: center;
+}
+
+.catalog-list {
+  margin-left: 3em;
+}

@@ -1,0 +1,14 @@
+
+> bufferutil@4.0.1 install /Users/Qianyi/Documents/projects/myblog/node_modules/bufferutil
+> node-gyp-build
+
++ acorn@6.4.1
++ @types/react@16.9.36
++ bufferutil@4.0.1
+added 4 packages from 2 contributors, updated 2 packages and audited 2512 packages in 13.417s
+
+144 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
