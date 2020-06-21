@@ -6,6 +6,7 @@
 
 li {
   list-style: none;
+  padding: 0.5em 0;
 }
 
 a {
@@ -13,11 +14,14 @@ a {
   color: inherit;
 }
 
-.catalog-title,
-.catalog-list {
+a:visited {
+  color: purple;
+}
+
+.catalog-title, .catalog-list {
   align-self: center;
 }
 
 .catalog-list {
-  margin-left: 3em;
+  margin-left: 1.5em;
 }

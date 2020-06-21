@@ -1,5 +1,5 @@
 .page {
-  margin: 2em 3em;
+  margin: 2em;
 }
 
 .title {
@@ -15,4 +15,16 @@
 
 .novel-link-item {
   font-size: 1.1em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+@media (min-width: 720px) {
+  .page {
+    width: 80%;
+    margin: 2em auto;
+  }
 }
