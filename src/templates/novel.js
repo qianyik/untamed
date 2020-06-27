@@ -9,6 +9,10 @@ const Novel = ({ pageContext }) => (
     <Helmet>
       <title>{pageContext.title}</title>
       <meta name="robots" content="noindex, nofollow" />
+      <link
+        rel="icon"
+        href="https://res.cloudinary.com/kamalia/image/upload/v1559861791/logo_kxcn4i.png"
+      ></link>
     </Helmet>
 
     <h1 className="title">{pageContext.title}</h1>

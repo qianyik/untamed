@@ -17,6 +17,10 @@ const CatalogPage = ({ pageContext }) => {
       <Helmet>
         <title>{pageContext.title}</title>
         <meta name="robots" content="noindex, nofollow" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/kamalia/image/upload/v1559861791/logo_kxcn4i.png"
+        ></link>
       </Helmet>
       <h1 className="catalog-title">{pageContext.title} </h1>
       <h2 className="main-catalog">

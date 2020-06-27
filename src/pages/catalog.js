@@ -9,6 +9,10 @@ const CatalogPage = ({}) => {
       <Helmet>
         <title>魔道先祖</title>
         <meta name="robots" content="noindex, nofollow" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/kamalia/image/upload/v1559861791/logo_kxcn4i.png"
+        ></link>
       </Helmet>
       <h1 className="catalog-title">魔道先祖</h1>
       <ul className="catalog-list">
