@@ -20,7 +20,7 @@ a:visited {
   color: purple;
 }
 
-.catalog-title, .catalog-list {
+.catalog-title, .catalog-list, .main-catalog {
   align-self: center;
 }
 

@@ -26,15 +26,21 @@ const Novel = ({ pageContext }) => (
 
     <div className="novel-link">
       {pageContext.id > 1 && (
-        <Link to={`/untamed/${pageContext.id - 1}`} className="novel-link-item">
+        <Link
+          to={`/${pageContext.prefix}/${pageContext.id - 1}`}
+          className="novel-link-item"
+        >
           Previous
         </Link>
       )}
-      <Link to="/catalog" className="novel-link-item">
+      <Link to={`/${pageContext.prefix}/catalog`} className="novel-link-item">
         Catalog
       </Link>
-      {pageContext.id < 127 && (
-        <Link to={`/untamed/${pageContext.id + 1}`} className="novel-link-item">
+      {pageContext.id < pageContext.total && (
+        <Link
+          to={`/${pageContext.prefix}/${pageContext.id + 1}`}
+          className="novel-link-item"
+        >
           Next
         </Link>
       )}

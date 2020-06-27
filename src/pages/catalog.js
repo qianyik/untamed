@@ -3,17 +3,7 @@ import { Helmet } from "react-helmet"
 
 import "./catalog.css"
 
-const CatalogPage = () => {
-  const untamed = require("../../data/untamedV1.json")
-
-  const listItems = untamed.map((chapter, index) => {
-    return (
-      <li key={index}>
-        <a href={`/untamed/${index + 1}`}>{chapter.title}</a>
-      </li>
-    )
-  })
-
+const CatalogPage = ({}) => {
   return (
     <div className="catalog-page">
       <Helmet>
@@ -21,7 +11,14 @@ const CatalogPage = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <h1 className="catalog-title">魔道先祖</h1>
-      <ul className="catalog-list">{listItems}</ul>
+      <ul className="catalog-list">
+        <li className="catalog-list-item">
+          <a href="/untamed/v1/catalog">第一版</a>
+        </li>
+        <li className="catalog-list-item">
+          <a href="/untamed/v2/catalog">第二版</a>
+        </li>
+      </ul>
     </div>
   )
 }
