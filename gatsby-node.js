@@ -32,6 +32,37 @@ exports.createPages = ({ actions: { createPage } }) => {
   })
 
   /**
+   *  Version 1, Taiwan
+   */
+  const v1_taiwan = require("./data/untamedV1_taiwan.json")
+
+  v1_taiwan.forEach(chapter => {
+    createPage({
+      path: `/untamed/v1/t/${chapter.id}/`,
+      component: require.resolve("./src/templates/novel.js"),
+      context: {
+        title: chapter.title,
+        content: chapter.content,
+        id: chapter.id,
+        prefix: "untamed/v1/t",
+        total: v1_taiwan.length,
+      },
+    })
+  })
+
+  // Catalog page for V1 Taiwan
+  createPage({
+    path: `/untamed/v1/t/catalog/`,
+    component: require.resolve("./src/templates/catalog.js"),
+    context: {
+      list: v1_taiwan.map(item => item.title),
+      id: v1_taiwan.map(item => item.id),
+      prefix: "untamed/v1/t",
+      title: "魔道先祖 V1 台湾",
+    },
+  })
+
+  /**
    *  Version 2
    */
   const v2 = require("./data/untamedV2.json")
@@ -63,7 +94,7 @@ exports.createPages = ({ actions: { createPage } }) => {
   })
 
   /**
-   * Version 3
+   * Version 3, Taiwan
    */
   const v3 = require("./data/untamedV3_taiwan.json")
 

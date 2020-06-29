@@ -20,6 +20,9 @@ const CatalogPage = ({}) => {
           <a href="/untamed/v1/catalog">第一版</a>
         </li>
         <li className="catalog-list-item">
+          <a href="/untamed/v1/t/catalog">第一版 - 台湾</a>
+        </li>
+        <li className="catalog-list-item">
           <a href="/untamed/v2/catalog">第二版</a>
         </li>
         <li className="catalog-list-item">
