@@ -123,4 +123,32 @@ exports.createPages = ({ actions: { createPage } }) => {
       title: "魔道先祖 V3",
     },
   })
+
+  // Lost in love
+  const lostinlove = require("./data/lost-love-in-time.json")
+
+  createPage({
+    path: `/lostinlove/catalog/`,
+    component: require.resolve("./src/templates/catalog.js"),
+    context: {
+      list: v3.map(item => item.title),
+      id: v3.map(item => item.id),
+      prefix: "lostinlove",
+      title: "醉玲珑",
+    },
+  })
+
+  lostinlove.forEach(chapter => {
+    createPage({
+      path: `/lostinlove/${chapter.id}/`,
+      component: require.resolve("./src/templates/novel.js"),
+      context: {
+        title: chapter.title,
+        content: chapter.content,
+        id: chapter.id,
+        prefix: "lostinlove",
+        total: lostinlove.length,
+      },
+    })
+  })
 }

@@ -29,6 +29,13 @@ const CatalogPage = ({}) => {
           <a href="/untamed/v3/catalog">第三版 - 台湾</a>
         </li>
       </ul>
+      <br />
+      <h1 className="catalog-title">醉玲珑</h1>
+      <ul className="catalog-list">
+        <li className="catalog-list-item">
+          <a href="/lostinlove/catalog">简体</a>
+        </li>
+      </ul>
     </div>
   )
 }
