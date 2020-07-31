@@ -131,8 +131,8 @@ exports.createPages = ({ actions: { createPage } }) => {
     path: `/lostinlove/catalog/`,
     component: require.resolve("./src/templates/catalog.js"),
     context: {
-      list: v3.map(item => item.title),
-      id: v3.map(item => item.id),
+      list: lostinlove.map(item => item.title),
+      id: lostinlove.map(item => item.id),
       prefix: "lostinlove",
       title: "醉玲珑",
     },
