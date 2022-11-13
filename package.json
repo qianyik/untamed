@@ -4,7 +4,6 @@
   "description": "My novel collection",
   "version": "0.1.0",
   "author": "Qianyi Kuang",
-  "type": "module",
   "dependencies": {
     "gatsby": "^2.22.15",
     "gatsby-image": "^2.4.5",
