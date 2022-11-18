@@ -1,12 +1,15 @@
-const path = require(`path`)
+import * as untamedV1 from "./data/untamedV1.json";
+import * as v1_taiwan from "./data/untamedV1_taiwan.json";
+import * as v2 from "./data/untamedV2.json";
+import * as v3 from "./data/untamedV3_taiwan.json";
+import * as lostinlove from "./data/lost-love-in-time.json";
 
-exports.createPages = ({ actions: { createPage } }) => {
+exports.createPages = async ({ actions }) => {
+  const {createPage} = actions;
   /**
    *  Version 1, Orginal
    */
-  const v1 = require("./data/untamedV1.json")
-
-  v1.forEach(chapter => {
+  untamedv1.forEach(chapter => {
     createPage({
       path: `/untamed/v1/${chapter.id}/`,
       component: require.resolve("./src/templates/novel.js"),
@@ -15,7 +18,7 @@ exports.createPages = ({ actions: { createPage } }) => {
         content: chapter.content,
         id: chapter.id,
         prefix: "untamed/v1",
-        total: v1.length,
+        total: untamedv1.length,
       },
     })
   })
@@ -24,8 +27,8 @@ exports.createPages = ({ actions: { createPage } }) => {
     path: `/untamed/v1/catalog/`,
     component: require.resolve("./src/templates/catalog.js"),
     context: {
-      list: v1.map(item => item.title),
-      id: v1.map(item => item.id),
+      list: untamedv1.map(item => item.title),
+      id: untamedv1.map(item => item.id),
       prefix: "untamed/v1",
       title: "魔道先祖 V1",
     },
@@ -34,8 +37,6 @@ exports.createPages = ({ actions: { createPage } }) => {
   /**
    *  Version 1, Taiwan
    */
-  const v1_taiwan = require("./data/untamedV1_taiwan.json")
-
   v1_taiwan.forEach(chapter => {
     createPage({
       path: `/untamed/v1/t/${chapter.id}/`,
@@ -65,8 +66,6 @@ exports.createPages = ({ actions: { createPage } }) => {
   /**
    *  Version 2
    */
-  const v2 = require("./data/untamedV2.json")
-
   v2.forEach(chapter => {
     createPage({
       path: `/untamed/v2/${chapter.id}/`,
@@ -96,8 +95,6 @@ exports.createPages = ({ actions: { createPage } }) => {
   /**
    * Version 3, Taiwan
    */
-  const v3 = require("./data/untamedV3_taiwan.json")
-
   v3.forEach(chapter => {
     createPage({
       path: `/untamed/v3/${chapter.id}/`,
@@ -125,8 +122,6 @@ exports.createPages = ({ actions: { createPage } }) => {
   })
 
   // Lost in love
-  const lostinlove = require("./data/lost-love-in-time.json")
-
   createPage({
     path: `/lostinlove/catalog/`,
     component: require.resolve("./src/templates/catalog.js"),
